@@ -26,6 +26,9 @@ The MS should implement the OAuth2 authentication protocol to other MSs. The pat
 
 ## Useful documentation
 
+Spring security documentation for oauth2 login
+https://docs.spring.io/spring-security/reference/servlet/oauth2/login/core.html
+
 ## Oauth 2.0 in our system
 
 ### Roles
