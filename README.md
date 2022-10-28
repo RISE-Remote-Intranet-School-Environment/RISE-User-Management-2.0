@@ -2,7 +2,7 @@
 
 # Index
 
-- why
+- Why 2.0
 - What
 - Useful documentation
 - OAuth2.0 in our System
@@ -12,13 +12,13 @@
 
 ## Why?
 
-Our goal is to make our microservice (from here ‘MS’ more machine-independent. The previous version was built in NodeJS and Wamp. The latter runs only on Windows.
+Our goal is to make our microservice (from here ‘MS’) more machine-independent. The previous version was built in NodeJS and Wamp. The latter runs only on Windows.
 
 We will re-build the system with Java using the very popular (and well documented) framework Spring.
 
 Additionally, we want to do it providing proper Javadoc (which was completely missing before) and Unit tests.
 
-## What?
+## What
 
 The MS should implement the OAuth2 authentication protocol to other MSs. The pattern can be described as follows:
 
@@ -26,10 +26,15 @@ The MS should implement the OAuth2 authentication protocol to other MSs. The pat
 
 ## Useful documentation
 
-Spring security documentation for oauth2 login
+Spring security documentation for oauth2 login:
 https://docs.spring.io/spring-security/reference/servlet/oauth2/login/core.html
 
-## Oauth 2.0 in our system
+Spring Boot and OAuth2 tutorial:
+https://spring.io/guides/tutorials/spring-boot-oauth2/
+
+## Oauth 2.0 and OpenId Connect protocols
+
+Quick explanation goes here..
 
 ### Roles
 
@@ -43,6 +48,19 @@ An OAuth 2.0 flow has the following roles:
 
 - Authorization Server: Server that authenticates the Resource Owner and issues access tokens after getting proper authorization. In this case, Auth0.
 
+## Oauth 2.0 in our system
+
+Documentation from Spring tutorial goes here
+
 ## Setup and Run
+
+- Requirements: maven, jdk, ... whatever
+- `git clone && cd bla bla `
+- Get your client id and secret from GitHub and Google
+- Modify application.yml adding client secret and client id like this:
+[screenshot goes here]
+- `mvn run command goes here`
+- open at localhost 
+- check
 
 ## Contributions
