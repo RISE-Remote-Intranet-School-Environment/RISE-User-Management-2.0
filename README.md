@@ -57,8 +57,8 @@ Documentation from Spring tutorial goes here
 - Requirements: maven, jdk
 - Clone the repository
 - Open it with VSCode or IntelliJ
-- Get your client id and secret from GitHub: go [here](#https://github.com/settings/developers), select "New OAuth App" and then the "Register a new OAuth application" page is presented. Enter an app name and description. Then, enter your app’s home page, which should be http://localhost:8080, in this case. Finally, indicate the Authorization callback URL as http://localhost:8080/login/oauth2/code/github and click Register Application.
-- Get your client id and secret from Google: go [here](#https://developers.google.com/identity/protocols/OpenIDConnect), follow the instructions on the OpenID Connect page, starting in the section, "Setting up OAuth 2.0". After completing the "Obtain OAuth 2.0 credentials" instructions, you should have a new OAuth Client with credentials consisting of a Client ID and a Client Secret.
+- Get your client id and secret from GitHub: go [here](https://github.com/settings/developers), select "New OAuth App" and then the "Register a new OAuth application" page is presented. Enter an app name and description. Then, enter your app’s home page, which should be http://localhost:8080, in this case. Finally, indicate the Authorization callback URL as http://localhost:8080/login/oauth2/code/github and click Register Application.
+- Get your client id and secret from Google: go [here](https://developers.google.com/identity/protocols/OpenIDConnect), follow the instructions on the OpenID Connect page, starting in the section, "Setting up OAuth 2.0". After completing the "Obtain OAuth 2.0 credentials" instructions, you should have a new OAuth Client with credentials consisting of a Client ID and a Client Secret.
 - The application.yml is not tracked for security reasons. Add your own manually or with: `touch src/main/resources/application.yml`
 - Then you can modify it using this template:
 ```yml
