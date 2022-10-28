@@ -45,13 +45,13 @@ public class SimpleApplication extends WebSecurityConfigurerAdapter{
                 .authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED))
             ).logout(l -> l
             .logoutSuccessUrl("/").permitAll()
-        ).csrf(c -> c
-		.csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
-	)
+            ).csrf(c -> c
+		    .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
+	        )
             .oauth2Login();
         // @formatter:on
     }
-        // @formatter:on
+        
 	public static void main(String[] args) {
 		SpringApplication.run(SimpleApplication.class, args);
 	}
