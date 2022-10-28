@@ -2,10 +2,10 @@
 
 # Index
 
-- [Why 2.0](#why-20)
-- [What](what)
-- [Useful documentation](#useful-documentation)
-- [OAuth2.0 in our System](#oauth20-in-our-system)
+- [Why 2.0](#why-20-question)
+- [What](#what-collision)
+- [Useful documentation](#useful-documentation-page_with_curl)
+- [OAuth2.0 in our System](#oauth-20-in-our-system)
 - [Setup and Run](#setup-and-run)
 - [Future TODOs](#future-todos)
 - [Contributions](#contributions)
@@ -16,7 +16,7 @@ Our goal is to make our microservice (from here ‘MS’) more machine-independe
 
 We will re-build the system with Java using the very popular (and well documented) framework Spring.
 
-Additionally, we want to do it providing proper Javadoc (which was completely missing before) and Unit tests.
+Additionally, we want to do it providing proper Javadoc (which was missing before) and (possibly) Unit tests.
 
 ## What :collision:
 
@@ -78,4 +78,8 @@ spring:
 - open your browser at `http://localhost:8080`
 - Test the login and logout
 
+## Future TODOs
+
 ## Contributions
+
+
