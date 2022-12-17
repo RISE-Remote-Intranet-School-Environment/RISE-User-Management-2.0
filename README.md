@@ -5,7 +5,7 @@
 - [Why 2.0](#why-20-question)
 - [What](#what-collision)
 - [Useful documentation](#useful-documentation-page_with_curl)
-- [OAuth2.0 in our System](#oauth-20-in-our-system)
+- [Oauth 2.0 and OpenId Connect protocols](#oauth-20-and-openid-connect-protocols)
 - [Setup and Run](#setup-and-run)
 - [Future TODOs](#future-todos)
 - [Contributions](#contributions)
@@ -146,4 +146,7 @@ server:
 
 ## Contributions
 
-
+- [Fatjon Freskina](https://github.com/fatjonfreskina)
+- Denis Rygaert
+- Hadrien Godts
+- Louise Boulard
