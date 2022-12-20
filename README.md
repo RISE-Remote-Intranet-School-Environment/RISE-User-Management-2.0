@@ -34,7 +34,7 @@ The image above describes the architecture as imagined for now. In plain english
 
 The whole point of this MS is to limit the amount of data the other MS have about the users, and to store as little data on the user as we can.
 
-Note: a JWT parser with unit test is implemented in [fill]. It can be used to parse the JWT sent by the authorization server to populate the DB and save their ID for the session.
+Note: a JWT parser with unit test is implemented in Project/JWTparser. It can be used to parse the JWT sent by the authorization server to populate the DB and save their ID for the session.
 
 So far, the proposed **roles** are :
 - Admin
@@ -45,13 +45,13 @@ So far, the proposed **roles** are :
 
 ## Useful documentation :page_with_curl:
 
-Spring security documentation for oauth2 login:
+Spring Security documentation for oauth2 login:
 https://docs.spring.io/spring-security/reference/servlet/oauth2/login/core.html
 
 Spring Boot and OAuth2 tutorial:
 https://spring.io/guides/tutorials/spring-boot-oauth2/
 
-Spring Boot SQL database tutorial:
+Spring Boot MySQL database tutorial:
 https://spring.io/guides/gs/accessing-data-mysql/
 
 ## Oauth 2.0 and OpenId Connect protocols
@@ -91,12 +91,8 @@ Next, let's look at the *theoretical flow* :
 5. The client request the resources from the resource server, presenting the token.
 6. If the token can be validated, the resource server sends the resources.
 
-Finally, let's look at the *real flow*
-
-The previous flow is only conceptual. In reality, things are more complicated.
-
-- Back channel and front channel : the previous flow is used in apps with no backend. This is less secure, because the token could be intercepted (altough this is hard to do). One way to secure this is to add the PCKE 
- 
+This is the general idea. Of course, this flow only represents the basics. Since Spring takes care of the concrete implementation, please refer to the following link for more information:
+https://www.rfc-editor.org/rfc/rfc6749#section-1.5 
 
 ## About Oauth 2.0 with Spring
 
@@ -134,6 +130,16 @@ server:
 - open your browser at `http://localhost:8080`
 - Test the login and logout
 
+## Database setup and run
+- Clone the repo
+- Use your favorite MySQL DB Management System (Wamp64 on Windows works fine)
+- Create a DB
+- Link the app to the DB in application.properties with url to database (by default you will juste need to change the name of the database, note the rest of the url), user and password
+- To use the db, open your terminal and use:
+  - $ curl localhost:8081/demo/add -d email=someone@somewhere.com -d role=4 (will create a user, role number 4 is GUEST (also works with "GUEST"))
+  - $ curl localhost:8081/demo/all (will display all lines in the DB)
+- Note: to check if the db is working, connect through your browser to check the DB
+
 ## Future TODOs
 
 - Figure out how to extract the JWT from the return from Google/Github (to be sent to the parser). Hint : go up the principal object in SimpleApplication, it should lead to the return object (this is a hypothesis, not cheked)
@@ -142,7 +148,6 @@ server:
 - Build an API for the other MS to communicate with this MS
 - Connect to db to the database
 
-(see also github project linked to this repo)
 
 ## Contributions
 
